@@ -1,0 +1,20 @@
+# Compiler and flags
+CXX = g++
+CXXFLAGS = -std=c++17 -O2 -Wall
+
+# Target executable name
+TARGET = main
+
+# Source file
+SRC = startup_code.cpp
+
+# Default rule
+all: $(TARGET)
+
+# Link/compile rule
+$(TARGET): $(SRC)
+	$(CXX) $(CXXFLAGS) $(SRC) -o $(TARGET)
+
+# Clean up build files
+clean:
+	rm -f $(TARGET)

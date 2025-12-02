@@ -1,0 +1,1020 @@
+// Bayesian Network
+
+variable N0_7muVerMo {
+  type discrete [ 4 ] = { StrongUp, WeakUp, Neutral, Down };
+}
+variable SubjVertMo {
+  type discrete [ 4 ] = { StronUp, WeakUp, Neutral, Down };
+}
+variable QGVertMotion {
+  type discrete [ 4 ] = { StrongUp, WeakUp, Neutral, Down };
+}
+variable CombVerMo {
+  type discrete [ 4 ] = { StrongUp, WeakUp, Neutral, Down };
+}
+variable AreaMeso_ALS {
+  type discrete [ 4 ] = { StrongUp, WeakUp, Neutral, Down };
+}
+variable SatContMoist {
+  type discrete [ 4 ] = { VeryWet, Wet, Neutral, Dry };
+}
+variable RaoContMoist {
+  type discrete [ 4 ] = { VeryWet, Wet, Neutral, Dry };
+}
+variable CombMoisture {
+  type discrete [ 4 ] = { VeryWet, Wet, Neutral, Dry };
+}
+variable AreaMoDryAir {
+  type discrete [ 4 ] = { VeryWet, Wet, Neutral, Dry };
+}
+variable VISCloudCov {
+  type discrete [ 3 ] = { Cloudy, PC, Clear };
+}
+variable IRCloudCover {
+  type discrete [ 3 ] = { Cloudy, PC, Clear };
+}
+variable CombClouds {
+  type discrete [ 3 ] = { Cloudy, PC, Clear };
+}
+variable CldShadeOth {
+  type discrete [ 3 ] = { Cloudy, PC, Clear };
+}
+variable AMInstabMt {
+  type discrete [ 3 ] = { None, Weak, Strong };
+}
+variable InsInMt {
+  type discrete [ 3 ] = { None, Weak, Strong };
+}
+variable WndHodograph {
+  type discrete [ 4 ] = { DCVZFavor, StrongWest, Westerly, Other };
+}
+variable OutflowFrMt {
+  type discrete [ 3 ] = { None, Weak, Strong };
+}
+variable MorningBound {
+  type discrete [ 3 ] = { None, Weak, Strong };
+}
+variable Boundaries {
+  type discrete [ 3 ] = { None, Weak, Strong };
+}
+variable CldShadeConv {
+  type discrete [ 3 ] = { None, Some, Marked };
+}
+variable CompPlFcst {
+  type discrete [ 3 ] = { IncCapDecIns, LittleChange, DecCapIncIns };
+}
+variable CapChange {
+  type discrete [ 3 ] = { Decreasing, LittleChange, Increasing };
+}
+variable LoLevMoistAd {
+  type discrete [ 4 ] = { StrongPos, WeakPos, Neutral, Negative };
+}
+variable InsChange {
+  type discrete [ 3 ] = { Decreasing, LittleChange, Increasing };
+}
+variable MountainFcst {
+  type discrete [ 3 ] = { XNIL, SIG, SVR };
+}
+variable Date {
+  type discrete [ 6 ] = { May15_Jun14, Jun15_Jul1, Jul2_Jul15, Jul16_Aug10, Aug11_Aug20, Aug20_Sep15 };
+}
+variable Scenario {
+  type discrete [ 11 ] = { A, B, C, D, E, F, G, H, I, J, K };
+}
+variable ScenRelAMCIN {
+  type discrete [ 2 ] = { AB, CThruK };
+}
+variable MorningCIN {
+  type discrete [ 4 ] = { None, PartInhibit, Stifling, TotalInhibit };
+}
+variable AMCINInScen {
+  type discrete [ 3 ] = { LessThanAve, Average, MoreThanAve };
+}
+variable CapInScen {
+  type discrete [ 3 ] = { LessThanAve, Average, MoreThanAve };
+}
+variable ScenRelAMIns {
+  type discrete [ 6 ] = { ABI, CDEJ, F, G, H, K };
+}
+variable LIfr12ZDENSd {
+  type discrete [ 4 ] = { LIGt0, N1GtLIGt_4, N5GtLIGt_8, LILt_8 };
+}
+variable AMDewptCalPl {
+  type discrete [ 3 ] = { Instability, Neutral, Stability };
+}
+variable AMInsWliScen {
+  type discrete [ 3 ] = { LessUnstable, Average, MoreUnstable };
+}
+variable InsSclInScen {
+  type discrete [ 3 ] = { LessUnstable, Average, MoreUnstable };
+}
+variable ScenRel3_4 {
+  type discrete [ 5 ] = { ACEFK, B, D, GJ, HI };
+}
+variable LatestCIN {
+  type discrete [ 4 ] = { None, PartInhibit, Stifling, TotalInhibit };
+}
+variable LLIW {
+  type discrete [ 4 ] = { Unfavorable, Weak, Moderate, Strong };
+}
+variable CurPropConv {
+  type discrete [ 4 ] = { None, Slight, Moderate, Strong };
+}
+variable ScnRelPlFcst {
+  type discrete [ 11 ] = { A, B, C, D, E, F, G, H, I, J, K };
+}
+variable PlainsFcst {
+  type discrete [ 3 ] = { XNIL, SIG, SVR };
+}
+variable N34StarFcst {
+  type discrete [ 3 ] = { XNIL, SIG, SVR };
+}
+variable R5Fcst {
+  type discrete [ 3 ] = { XNIL, SIG, SVR };
+}
+variable Dewpoints {
+  type discrete [ 7 ] = { LowEvrywhere, LowAtStation, LowSHighN, LowNHighS, LowMtsHighPl, HighEvrywher, Other };
+}
+variable LowLLapse {
+  type discrete [ 4 ] = { CloseToDryAd, Steep, ModerateOrLe, Stable };
+}
+variable MeanRH {
+  type discrete [ 3 ] = { VeryMoist, Average, Dry };
+}
+variable MidLLapse {
+  type discrete [ 3 ] = { CloseToDryAd, Steep, ModerateOrLe };
+}
+variable MvmtFeatures {
+  type discrete [ 4 ] = { StrongFront, MarkedUpper, OtherRapid, NoMajor };
+}
+variable RHRatio {
+  type discrete [ 3 ] = { MoistMDryL, DryMMoistL, Other };
+}
+variable SfcWndShfDis {
+  type discrete [ 7 ] = { DenvCyclone, E_W_N, E_W_S, MovingFtorOt, DryLine, None, Other };
+}
+variable SynForcng {
+  type discrete [ 5 ] = { SigNegative, NegToPos, SigPositive, PosToNeg, LittleChange };
+}
+variable TempDis {
+  type discrete [ 4 ] = { QStationary, Moving, None, Other };
+}
+variable WindAloft {
+  type discrete [ 4 ] = { LV, SWQuad, NWQuad, AllElse };
+}
+variable WindFieldMt {
+  type discrete [ 2 ] = { Westerly, LVorOther };
+}
+variable WindFieldPln {
+  type discrete [ 6 ] = { LV, DenvCyclone, LongAnticyc, E_NE, SEQuad, WidespdDnsl };
+}
+probability ( N0_7muVerMo ) {
+	table 0.5000 0.5000 ;
+};
+
+probability ( SubjVertMo ) {
+	table 0.5000 0.5000 ;
+};
+
+probability ( QGVertMotion ) {
+	table 0.5000 0.5000 ;
+};
+
+probability ( CombVerMo | N0_7muVerMo, SubjVertMo, QGVertMotion ) {
+	(StrongUp, StronUp, StrongUp) 0.5000 0.5000
+	(StrongUp, StronUp, WeakUp) 0.5000 0.5000
+	(StrongUp, StronUp, Neutral) 0.5000 0.5000
+	(StrongUp, StronUp, Down) 0.5000 0.5000
+	(StrongUp, WeakUp, StrongUp) 0.5000 0.5000
+	(StrongUp, WeakUp, WeakUp) 0.5000 0.5000
+	(StrongUp, WeakUp, Neutral) 0.5000 0.5000
+	(StrongUp, WeakUp, Down) 0.5000 0.5000
+	(StrongUp, Neutral, StrongUp) 0.5000 0.5000
+	(StrongUp, Neutral, WeakUp) 0.5000 0.5000
+	(StrongUp, Neutral, Neutral) 0.5000 0.5000
+	(StrongUp, Neutral, Down) 0.5000 0.5000
+	(StrongUp, Down, StrongUp) 0.5000 0.5000
+	(StrongUp, Down, WeakUp) 0.5000 0.5000
+	(StrongUp, Down, Neutral) 0.5000 0.5000
+	(StrongUp, Down, Down) 0.5000 0.5000
+	(WeakUp, StronUp, StrongUp) 0.5000 0.5000
+	(WeakUp, StronUp, WeakUp) 0.5000 0.5000
+	(WeakUp, StronUp, Neutral) 0.5000 0.5000
+	(WeakUp, StronUp, Down) 0.5000 0.5000
+	(WeakUp, WeakUp, StrongUp) 0.5000 0.5000
+	(WeakUp, WeakUp, WeakUp) 0.5000 0.5000
+	(WeakUp, WeakUp, Neutral) 0.5000 0.5000
+	(WeakUp, WeakUp, Down) 0.5000 0.5000
+	(WeakUp, Neutral, StrongUp) 0.5000 0.5000
+	(WeakUp, Neutral, WeakUp) 0.5000 0.5000
+	(WeakUp, Neutral, Neutral) 0.5000 0.5000
+	(WeakUp, Neutral, Down) 0.5000 0.5000
+	(WeakUp, Down, StrongUp) 0.5000 0.5000
+	(WeakUp, Down, WeakUp) 0.5000 0.5000
+	(WeakUp, Down, Neutral) 0.5000 0.5000
+	(WeakUp, Down, Down) 0.5000 0.5000
+	(Neutral, StronUp, StrongUp) 0.5000 0.5000
+	(Neutral, StronUp, WeakUp) 0.5000 0.5000
+	(Neutral, StronUp, Neutral) 0.5000 0.5000
+	(Neutral, StronUp, Down) 0.5000 0.5000
+	(Neutral, WeakUp, StrongUp) 0.5000 0.5000
+	(Neutral, WeakUp, WeakUp) 0.5000 0.5000
+	(Neutral, WeakUp, Neutral) 0.5000 0.5000
+	(Neutral, WeakUp, Down) 0.5000 0.5000
+	(Neutral, Neutral, StrongUp) 0.5000 0.5000
+	(Neutral, Neutral, WeakUp) 0.5000 0.5000
+	(Neutral, Neutral, Neutral) 0.5000 0.5000
+	(Neutral, Neutral, Down) 0.5000 0.5000
+	(Neutral, Down, StrongUp) 0.5000 0.5000
+	(Neutral, Down, WeakUp) 0.5000 0.5000
+	(Neutral, Down, Neutral) 0.5000 0.5000
+	(Neutral, Down, Down) 0.5000 0.5000
+	(Down, StronUp, StrongUp) 0.5000 0.5000
+	(Down, StronUp, WeakUp) 0.5000 0.5000
+	(Down, StronUp, Neutral) 0.5000 0.5000
+	(Down, StronUp, Down) 0.5000 0.5000
+	(Down, WeakUp, StrongUp) 0.5000 0.5000
+	(Down, WeakUp, WeakUp) 0.5000 0.5000
+	(Down, WeakUp, Neutral) 0.5000 0.5000
+	(Down, WeakUp, Down) 0.5000 0.5000
+	(Down, Neutral, StrongUp) 0.5000 0.5000
+	(Down, Neutral, WeakUp) 0.5000 0.5000
+	(Down, Neutral, Neutral) 0.5000 0.5000
+	(Down, Neutral, Down) 0.5000 0.5000
+	(Down, Down, StrongUp) 0.5000 0.5000
+	(Down, Down, WeakUp) 0.5000 0.5000
+	(Down, Down, Neutral) 0.5000 0.5000
+	(Down, Down, Down) 0.5000 0.5000
+};
+
+probability ( AreaMeso_ALS | CombVerMo ) {
+	(StrongUp) 0.5000 0.5000
+	(WeakUp) 0.5000 0.5000
+	(Neutral) 0.5000 0.5000
+	(Down) 0.5000 0.5000
+};
+
+probability ( SatContMoist ) {
+	table 0.5000 0.5000 ;
+};
+
+probability ( RaoContMoist ) {
+	table 0.5000 0.5000 ;
+};
+
+probability ( CombMoisture | SatContMoist, RaoContMoist ) {
+	(VeryWet, VeryWet) 0.5000 0.5000
+	(VeryWet, Wet) 0.5000 0.5000
+	(VeryWet, Neutral) 0.5000 0.5000
+	(VeryWet, Dry) 0.5000 0.5000
+	(Wet, VeryWet) 0.5000 0.5000
+	(Wet, Wet) 0.5000 0.5000
+	(Wet, Neutral) 0.5000 0.5000
+	(Wet, Dry) 0.5000 0.5000
+	(Neutral, VeryWet) 0.5000 0.5000
+	(Neutral, Wet) 0.5000 0.5000
+	(Neutral, Neutral) 0.5000 0.5000
+	(Neutral, Dry) 0.5000 0.5000
+	(Dry, VeryWet) 0.5000 0.5000
+	(Dry, Wet) 0.5000 0.5000
+	(Dry, Neutral) 0.5000 0.5000
+	(Dry, Dry) 0.5000 0.5000
+};
+
+probability ( AreaMoDryAir | AreaMeso_ALS, CombMoisture ) {
+	(StrongUp, VeryWet) 0.5000 0.5000
+	(StrongUp, Wet) 0.5000 0.5000
+	(StrongUp, Neutral) 0.5000 0.5000
+	(StrongUp, Dry) 0.5000 0.5000
+	(WeakUp, VeryWet) 0.5000 0.5000
+	(WeakUp, Wet) 0.5000 0.5000
+	(WeakUp, Neutral) 0.5000 0.5000
+	(WeakUp, Dry) 0.5000 0.5000
+	(Neutral, VeryWet) 0.5000 0.5000
+	(Neutral, Wet) 0.5000 0.5000
+	(Neutral, Neutral) 0.5000 0.5000
+	(Neutral, Dry) 0.5000 0.5000
+	(Down, VeryWet) 0.5000 0.5000
+	(Down, Wet) 0.5000 0.5000
+	(Down, Neutral) 0.5000 0.5000
+	(Down, Dry) 0.5000 0.5000
+};
+
+probability ( VISCloudCov ) {
+	table 0.5000 0.5000 ;
+};
+
+probability ( IRCloudCover ) {
+	table 0.5000 0.5000 ;
+};
+
+probability ( CombClouds | VISCloudCov, IRCloudCover ) {
+	(Cloudy, Cloudy) 0.5000 0.5000
+	(Cloudy, PC) 0.5000 0.5000
+	(Cloudy, Clear) 0.5000 0.5000
+	(PC, Cloudy) 0.5000 0.5000
+	(PC, PC) 0.5000 0.5000
+	(PC, Clear) 0.5000 0.5000
+	(Clear, Cloudy) 0.5000 0.5000
+	(Clear, PC) 0.5000 0.5000
+	(Clear, Clear) 0.5000 0.5000
+};
+
+probability ( CldShadeOth | AreaMoDryAir, AreaMeso_ALS, CombClouds ) {
+	(VeryWet, StrongUp, Cloudy) 0.5000 0.5000
+	(VeryWet, StrongUp, PC) 0.5000 0.5000
+	(VeryWet, StrongUp, Clear) 0.5000 0.5000
+	(VeryWet, WeakUp, Cloudy) 0.5000 0.5000
+	(VeryWet, WeakUp, PC) 0.5000 0.5000
+	(VeryWet, WeakUp, Clear) 0.5000 0.5000
+	(VeryWet, Neutral, Cloudy) 0.5000 0.5000
+	(VeryWet, Neutral, PC) 0.5000 0.5000
+	(VeryWet, Neutral, Clear) 0.5000 0.5000
+	(VeryWet, Down, Cloudy) 0.5000 0.5000
+	(VeryWet, Down, PC) 0.5000 0.5000
+	(VeryWet, Down, Clear) 0.5000 0.5000
+	(Wet, StrongUp, Cloudy) 0.5000 0.5000
+	(Wet, StrongUp, PC) 0.5000 0.5000
+	(Wet, StrongUp, Clear) 0.5000 0.5000
+	(Wet, WeakUp, Cloudy) 0.5000 0.5000
+	(Wet, WeakUp, PC) 0.5000 0.5000
+	(Wet, WeakUp, Clear) 0.5000 0.5000
+	(Wet, Neutral, Cloudy) 0.5000 0.5000
+	(Wet, Neutral, PC) 0.5000 0.5000
+	(Wet, Neutral, Clear) 0.5000 0.5000
+	(Wet, Down, Cloudy) 0.5000 0.5000
+	(Wet, Down, PC) 0.5000 0.5000
+	(Wet, Down, Clear) 0.5000 0.5000
+	(Neutral, StrongUp, Cloudy) 0.5000 0.5000
+	(Neutral, StrongUp, PC) 0.5000 0.5000
+	(Neutral, StrongUp, Clear) 0.5000 0.5000
+	(Neutral, WeakUp, Cloudy) 0.5000 0.5000
+	(Neutral, WeakUp, PC) 0.5000 0.5000
+	(Neutral, WeakUp, Clear) 0.5000 0.5000
+	(Neutral, Neutral, Cloudy) 0.5000 0.5000
+	(Neutral, Neutral, PC) 0.5000 0.5000
+	(Neutral, Neutral, Clear) 0.5000 0.5000
+	(Neutral, Down, Cloudy) 0.5000 0.5000
+	(Neutral, Down, PC) 0.5000 0.5000
+	(Neutral, Down, Clear) 0.5000 0.5000
+	(Dry, StrongUp, Cloudy) 0.5000 0.5000
+	(Dry, StrongUp, PC) 0.5000 0.5000
+	(Dry, StrongUp, Clear) 0.5000 0.5000
+	(Dry, WeakUp, Cloudy) 0.5000 0.5000
+	(Dry, WeakUp, PC) 0.5000 0.5000
+	(Dry, WeakUp, Clear) 0.5000 0.5000
+	(Dry, Neutral, Cloudy) 0.5000 0.5000
+	(Dry, Neutral, PC) 0.5000 0.5000
+	(Dry, Neutral, Clear) 0.5000 0.5000
+	(Dry, Down, Cloudy) 0.5000 0.5000
+	(Dry, Down, PC) 0.5000 0.5000
+	(Dry, Down, Clear) 0.5000 0.5000
+};
+
+probability ( AMInstabMt ) {
+	table 0.5000 0.5000 ;
+};
+
+probability ( InsInMt | CldShadeOth, AMInstabMt ) {
+	(Cloudy, None) 0.5000 0.5000
+	(Cloudy, Weak) 0.5000 0.5000
+	(Cloudy, Strong) 0.5000 0.5000
+	(PC, None) 0.5000 0.5000
+	(PC, Weak) 0.5000 0.5000
+	(PC, Strong) 0.5000 0.5000
+	(Clear, None) 0.5000 0.5000
+	(Clear, Weak) 0.5000 0.5000
+	(Clear, Strong) 0.5000 0.5000
+};
+
+probability ( WndHodograph ) {
+	table 0.5000 0.5000 ;
+};
+
+probability ( OutflowFrMt | InsInMt, WndHodograph ) {
+	(None, DCVZFavor) 0.5000 0.5000
+	(None, StrongWest) 0.5000 0.5000
+	(None, Westerly) 0.5000 0.5000
+	(None, Other) 0.5000 0.5000
+	(Weak, DCVZFavor) 0.5000 0.5000
+	(Weak, StrongWest) 0.5000 0.5000
+	(Weak, Westerly) 0.5000 0.5000
+	(Weak, Other) 0.5000 0.5000
+	(Strong, DCVZFavor) 0.5000 0.5000
+	(Strong, StrongWest) 0.5000 0.5000
+	(Strong, Westerly) 0.5000 0.5000
+	(Strong, Other) 0.5000 0.5000
+};
+
+probability ( MorningBound ) {
+	table 0.5000 0.5000 ;
+};
+
+probability ( Boundaries | OutflowFrMt, WndHodograph, MorningBound ) {
+	(None, DCVZFavor, None) 0.5000 0.5000
+	(None, DCVZFavor, Weak) 0.5000 0.5000
+	(None, DCVZFavor, Strong) 0.5000 0.5000
+	(None, StrongWest, None) 0.5000 0.5000
+	(None, StrongWest, Weak) 0.5000 0.5000
+	(None, StrongWest, Strong) 0.5000 0.5000
+	(None, Westerly, None) 0.5000 0.5000
+	(None, Westerly, Weak) 0.5000 0.5000
+	(None, Westerly, Strong) 0.5000 0.5000
+	(None, Other, None) 0.5000 0.5000
+	(None, Other, Weak) 0.5000 0.5000
+	(None, Other, Strong) 0.5000 0.5000
+	(Weak, DCVZFavor, None) 0.5000 0.5000
+	(Weak, DCVZFavor, Weak) 0.5000 0.5000
+	(Weak, DCVZFavor, Strong) 0.5000 0.5000
+	(Weak, StrongWest, None) 0.5000 0.5000
+	(Weak, StrongWest, Weak) 0.5000 0.5000
+	(Weak, StrongWest, Strong) 0.5000 0.5000
+	(Weak, Westerly, None) 0.5000 0.5000
+	(Weak, Westerly, Weak) 0.5000 0.5000
+	(Weak, Westerly, Strong) 0.5000 0.5000
+	(Weak, Other, None) 0.5000 0.5000
+	(Weak, Other, Weak) 0.5000 0.5000
+	(Weak, Other, Strong) 0.5000 0.5000
+	(Strong, DCVZFavor, None) 0.5000 0.5000
+	(Strong, DCVZFavor, Weak) 0.5000 0.5000
+	(Strong, DCVZFavor, Strong) 0.5000 0.5000
+	(Strong, StrongWest, None) 0.5000 0.5000
+	(Strong, StrongWest, Weak) 0.5000 0.5000
+	(Strong, StrongWest, Strong) 0.5000 0.5000
+	(Strong, Westerly, None) 0.5000 0.5000
+	(Strong, Westerly, Weak) 0.5000 0.5000
+	(Strong, Westerly, Strong) 0.5000 0.5000
+	(Strong, Other, None) 0.5000 0.5000
+	(Strong, Other, Weak) 0.5000 0.5000
+	(Strong, Other, Strong) 0.5000 0.5000
+};
+
+probability ( CldShadeConv | InsInMt, WndHodograph ) {
+	(None, DCVZFavor) 0.5000 0.5000
+	(None, StrongWest) 0.5000 0.5000
+	(None, Westerly) 0.5000 0.5000
+	(None, Other) 0.5000 0.5000
+	(Weak, DCVZFavor) 0.5000 0.5000
+	(Weak, StrongWest) 0.5000 0.5000
+	(Weak, Westerly) 0.5000 0.5000
+	(Weak, Other) 0.5000 0.5000
+	(Strong, DCVZFavor) 0.5000 0.5000
+	(Strong, StrongWest) 0.5000 0.5000
+	(Strong, Westerly) 0.5000 0.5000
+	(Strong, Other) 0.5000 0.5000
+};
+
+probability ( CompPlFcst | Boundaries, CldShadeConv, AreaMeso_ALS, CldShadeOth ) {
+	(None, None, StrongUp, Cloudy) 0.5000 0.5000
+	(None, None, StrongUp, PC) 0.5000 0.5000
+	(None, None, StrongUp, Clear) 0.5000 0.5000
+	(None, None, WeakUp, Cloudy) 0.5000 0.5000
+	(None, None, WeakUp, PC) 0.5000 0.5000
+	(None, None, WeakUp, Clear) 0.5000 0.5000
+	(None, None, Neutral, Cloudy) 0.5000 0.5000
+	(None, None, Neutral, PC) 0.5000 0.5000
+	(None, None, Neutral, Clear) 0.5000 0.5000
+	(None, None, Down, Cloudy) 0.5000 0.5000
+	(None, None, Down, PC) 0.5000 0.5000
+	(None, None, Down, Clear) 0.5000 0.5000
+	(None, Some, StrongUp, Cloudy) 0.5000 0.5000
+	(None, Some, StrongUp, PC) 0.5000 0.5000
+	(None, Some, StrongUp, Clear) 0.5000 0.5000
+	(None, Some, WeakUp, Cloudy) 0.5000 0.5000
+	(None, Some, WeakUp, PC) 0.5000 0.5000
+	(None, Some, WeakUp, Clear) 0.5000 0.5000
+	(None, Some, Neutral, Cloudy) 0.5000 0.5000
+	(None, Some, Neutral, PC) 0.5000 0.5000
+	(None, Some, Neutral, Clear) 0.5000 0.5000
+	(None, Some, Down, Cloudy) 0.5000 0.5000
+	(None, Some, Down, PC) 0.5000 0.5000
+	(None, Some, Down, Clear) 0.5000 0.5000
+	(None, Marked, StrongUp, Cloudy) 0.5000 0.5000
+	(None, Marked, StrongUp, PC) 0.5000 0.5000
+	(None, Marked, StrongUp, Clear) 0.5000 0.5000
+	(None, Marked, WeakUp, Cloudy) 0.5000 0.5000
+	(None, Marked, WeakUp, PC) 0.5000 0.5000
+	(None, Marked, WeakUp, Clear) 0.5000 0.5000
+	(None, Marked, Neutral, Cloudy) 0.5000 0.5000
+	(None, Marked, Neutral, PC) 0.5000 0.5000
+	(None, Marked, Neutral, Clear) 0.5000 0.5000
+	(None, Marked, Down, Cloudy) 0.5000 0.5000
+	(None, Marked, Down, PC) 0.5000 0.5000
+	(None, Marked, Down, Clear) 0.5000 0.5000
+	(Weak, None, StrongUp, Cloudy) 0.5000 0.5000
+	(Weak, None, StrongUp, PC) 0.5000 0.5000
+	(Weak, None, StrongUp, Clear) 0.5000 0.5000
+	(Weak, None, WeakUp, Cloudy) 0.5000 0.5000
+	(Weak, None, WeakUp, PC) 0.5000 0.5000
+	(Weak, None, WeakUp, Clear) 0.5000 0.5000
+	(Weak, None, Neutral, Cloudy) 0.5000 0.5000
+	(Weak, None, Neutral, PC) 0.5000 0.5000
+	(Weak, None, Neutral, Clear) 0.5000 0.5000
+	(Weak, None, Down, Cloudy) 0.5000 0.5000
+	(Weak, None, Down, PC) 0.5000 0.5000
+	(Weak, None, Down, Clear) 0.5000 0.5000
+	(Weak, Some, StrongUp, Cloudy) 0.5000 0.5000
+	(Weak, Some, StrongUp, PC) 0.5000 0.5000
+	(Weak, Some, StrongUp, Clear) 0.5000 0.5000
+	(Weak, Some, WeakUp, Cloudy) 0.5000 0.5000
+	(Weak, Some, WeakUp, PC) 0.5000 0.5000
+	(Weak, Some, WeakUp, Clear) 0.5000 0.5000
+	(Weak, Some, Neutral, Cloudy) 0.5000 0.5000
+	(Weak, Some, Neutral, PC) 0.5000 0.5000
+	(Weak, Some, Neutral, Clear) 0.5000 0.5000
+	(Weak, Some, Down, Cloudy) 0.5000 0.5000
+	(Weak, Some, Down, PC) 0.5000 0.5000
+	(Weak, Some, Down, Clear) 0.5000 0.5000
+	(Weak, Marked, StrongUp, Cloudy) 0.5000 0.5000
+	(Weak, Marked, StrongUp, PC) 0.5000 0.5000
+	(Weak, Marked, StrongUp, Clear) 0.5000 0.5000
+	(Weak, Marked, WeakUp, Cloudy) 0.5000 0.5000
+	(Weak, Marked, WeakUp, PC) 0.5000 0.5000
+	(Weak, Marked, WeakUp, Clear) 0.5000 0.5000
+	(Weak, Marked, Neutral, Cloudy) 0.5000 0.5000
+	(Weak, Marked, Neutral, PC) 0.5000 0.5000
+	(Weak, Marked, Neutral, Clear) 0.5000 0.5000
+	(Weak, Marked, Down, Cloudy) 0.5000 0.5000
+	(Weak, Marked, Down, PC) 0.5000 0.5000
+	(Weak, Marked, Down, Clear) 0.5000 0.5000
+	(Strong, None, StrongUp, Cloudy) 0.5000 0.5000
+	(Strong, None, StrongUp, PC) 0.5000 0.5000
+	(Strong, None, StrongUp, Clear) 0.5000 0.5000
+	(Strong, None, WeakUp, Cloudy) 0.5000 0.5000
+	(Strong, None, WeakUp, PC) 0.5000 0.5000
+	(Strong, None, WeakUp, Clear) 0.5000 0.5000
+	(Strong, None, Neutral, Cloudy) 0.5000 0.5000
+	(Strong, None, Neutral, PC) 0.5000 0.5000
+	(Strong, None, Neutral, Clear) 0.5000 0.5000
+	(Strong, None, Down, Cloudy) 0.5000 0.5000
+	(Strong, None, Down, PC) 0.5000 0.5000
+	(Strong, None, Down, Clear) 0.5000 0.5000
+	(Strong, Some, StrongUp, Cloudy) 0.5000 0.5000
+	(Strong, Some, StrongUp, PC) 0.5000 0.5000
+	(Strong, Some, StrongUp, Clear) 0.5000 0.5000
+	(Strong, Some, WeakUp, Cloudy) 0.5000 0.5000
+	(Strong, Some, WeakUp, PC) 0.5000 0.5000
+	(Strong, Some, WeakUp, Clear) 0.5000 0.5000
+	(Strong, Some, Neutral, Cloudy) 0.5000 0.5000
+	(Strong, Some, Neutral, PC) 0.5000 0.5000
+	(Strong, Some, Neutral, Clear) 0.5000 0.5000
+	(Strong, Some, Down, Cloudy) 0.5000 0.5000
+	(Strong, Some, Down, PC) 0.5000 0.5000
+	(Strong, Some, Down, Clear) 0.5000 0.5000
+	(Strong, Marked, StrongUp, Cloudy) 0.5000 0.5000
+	(Strong, Marked, StrongUp, PC) 0.5000 0.5000
+	(Strong, Marked, StrongUp, Clear) 0.5000 0.5000
+	(Strong, Marked, WeakUp, Cloudy) 0.5000 0.5000
+	(Strong, Marked, WeakUp, PC) 0.5000 0.5000
+	(Strong, Marked, WeakUp, Clear) 0.5000 0.5000
+	(Strong, Marked, Neutral, Cloudy) 0.5000 0.5000
+	(Strong, Marked, Neutral, PC) 0.5000 0.5000
+	(Strong, Marked, Neutral, Clear) 0.5000 0.5000
+	(Strong, Marked, Down, Cloudy) 0.5000 0.5000
+	(Strong, Marked, Down, PC) 0.5000 0.5000
+	(Strong, Marked, Down, Clear) 0.5000 0.5000
+};
+
+probability ( CapChange | CompPlFcst ) {
+	(IncCapDecIns) 0.5000 0.5000
+	(LittleChange) 0.5000 0.5000
+	(DecCapIncIns) 0.5000 0.5000
+};
+
+probability ( LoLevMoistAd ) {
+	table 0.5000 0.5000 ;
+};
+
+probability ( InsChange | LoLevMoistAd, CompPlFcst ) {
+	(StrongPos, IncCapDecIns) 0.5000 0.5000
+	(StrongPos, LittleChange) 0.5000 0.5000
+	(StrongPos, DecCapIncIns) 0.5000 0.5000
+	(WeakPos, IncCapDecIns) 0.5000 0.5000
+	(WeakPos, LittleChange) 0.5000 0.5000
+	(WeakPos, DecCapIncIns) 0.5000 0.5000
+	(Neutral, IncCapDecIns) 0.5000 0.5000
+	(Neutral, LittleChange) 0.5000 0.5000
+	(Neutral, DecCapIncIns) 0.5000 0.5000
+	(Negative, IncCapDecIns) 0.5000 0.5000
+	(Negative, LittleChange) 0.5000 0.5000
+	(Negative, DecCapIncIns) 0.5000 0.5000
+};
+
+probability ( MountainFcst | InsInMt ) {
+	(None) 0.5000 0.5000
+	(Weak) 0.5000 0.5000
+	(Strong) 0.5000 0.5000
+};
+
+probability ( Date ) {
+	table 0.5000 0.5000 ;
+};
+
+probability ( Scenario | Date ) {
+	(May15_Jun14) 0.5000 0.5000
+	(Jun15_Jul1) 0.5000 0.5000
+	(Jul2_Jul15) 0.5000 0.5000
+	(Jul16_Aug10) 0.5000 0.5000
+	(Aug11_Aug20) 0.5000 0.5000
+	(Aug20_Sep15) 0.5000 0.5000
+};
+
+probability ( ScenRelAMCIN | Scenario ) {
+	(A) 0.5000 0.5000
+	(B) 0.5000 0.5000
+	(C) 0.5000 0.5000
+	(D) 0.5000 0.5000
+	(E) 0.5000 0.5000
+	(F) 0.5000 0.5000
+	(G) 0.5000 0.5000
+	(H) 0.5000 0.5000
+	(I) 0.5000 0.5000
+	(J) 0.5000 0.5000
+	(K) 0.5000 0.5000
+};
+
+probability ( MorningCIN ) {
+	table 0.5000 0.5000 ;
+};
+
+probability ( AMCINInScen | ScenRelAMCIN, MorningCIN ) {
+	(AB, None) 0.5000 0.5000
+	(AB, PartInhibit) 0.5000 0.5000
+	(AB, Stifling) 0.5000 0.5000
+	(AB, TotalInhibit) 0.5000 0.5000
+	(CThruK, None) 0.5000 0.5000
+	(CThruK, PartInhibit) 0.5000 0.5000
+	(CThruK, Stifling) 0.5000 0.5000
+	(CThruK, TotalInhibit) 0.5000 0.5000
+};
+
+probability ( CapInScen | AMCINInScen, CapChange ) {
+	(LessThanAve, Decreasing) 0.5000 0.5000
+	(LessThanAve, LittleChange) 0.5000 0.5000
+	(LessThanAve, Increasing) 0.5000 0.5000
+	(Average, Decreasing) 0.5000 0.5000
+	(Average, LittleChange) 0.5000 0.5000
+	(Average, Increasing) 0.5000 0.5000
+	(MoreThanAve, Decreasing) 0.5000 0.5000
+	(MoreThanAve, LittleChange) 0.5000 0.5000
+	(MoreThanAve, Increasing) 0.5000 0.5000
+};
+
+probability ( ScenRelAMIns | Scenario ) {
+	(A) 0.5000 0.5000
+	(B) 0.5000 0.5000
+	(C) 0.5000 0.5000
+	(D) 0.5000 0.5000
+	(E) 0.5000 0.5000
+	(F) 0.5000 0.5000
+	(G) 0.5000 0.5000
+	(H) 0.5000 0.5000
+	(I) 0.5000 0.5000
+	(J) 0.5000 0.5000
+	(K) 0.5000 0.5000
+};
+
+probability ( LIfr12ZDENSd ) {
+	table 0.5000 0.5000 ;
+};
+
+probability ( AMDewptCalPl ) {
+	table 0.5000 0.5000 ;
+};
+
+probability ( AMInsWliScen | ScenRelAMIns, LIfr12ZDENSd, AMDewptCalPl ) {
+	(ABI, LIGt0, Instability) 0.5000 0.5000
+	(ABI, LIGt0, Neutral) 0.5000 0.5000
+	(ABI, LIGt0, Stability) 0.5000 0.5000
+	(ABI, N1GtLIGt_4, Instability) 0.5000 0.5000
+	(ABI, N1GtLIGt_4, Neutral) 0.5000 0.5000
+	(ABI, N1GtLIGt_4, Stability) 0.5000 0.5000
+	(ABI, N5GtLIGt_8, Instability) 0.5000 0.5000
+	(ABI, N5GtLIGt_8, Neutral) 0.5000 0.5000
+	(ABI, N5GtLIGt_8, Stability) 0.5000 0.5000
+	(ABI, LILt_8, Instability) 0.5000 0.5000
+	(ABI, LILt_8, Neutral) 0.5000 0.5000
+	(ABI, LILt_8, Stability) 0.5000 0.5000
+	(CDEJ, LIGt0, Instability) 0.5000 0.5000
+	(CDEJ, LIGt0, Neutral) 0.5000 0.5000
+	(CDEJ, LIGt0, Stability) 0.5000 0.5000
+	(CDEJ, N1GtLIGt_4, Instability) 0.5000 0.5000
+	(CDEJ, N1GtLIGt_4, Neutral) 0.5000 0.5000
+	(CDEJ, N1GtLIGt_4, Stability) 0.5000 0.5000
+	(CDEJ, N5GtLIGt_8, Instability) 0.5000 0.5000
+	(CDEJ, N5GtLIGt_8, Neutral) 0.5000 0.5000
+	(CDEJ, N5GtLIGt_8, Stability) 0.5000 0.5000
+	(CDEJ, LILt_8, Instability) 0.5000 0.5000
+	(CDEJ, LILt_8, Neutral) 0.5000 0.5000
+	(CDEJ, LILt_8, Stability) 0.5000 0.5000
+	(F, LIGt0, Instability) 0.5000 0.5000
+	(F, LIGt0, Neutral) 0.5000 0.5000
+	(F, LIGt0, Stability) 0.5000 0.5000
+	(F, N1GtLIGt_4, Instability) 0.5000 0.5000
+	(F, N1GtLIGt_4, Neutral) 0.5000 0.5000
+	(F, N1GtLIGt_4, Stability) 0.5000 0.5000
+	(F, N5GtLIGt_8, Instability) 0.5000 0.5000
+	(F, N5GtLIGt_8, Neutral) 0.5000 0.5000
+	(F, N5GtLIGt_8, Stability) 0.5000 0.5000
+	(F, LILt_8, Instability) 0.5000 0.5000
+	(F, LILt_8, Neutral) 0.5000 0.5000
+	(F, LILt_8, Stability) 0.5000 0.5000
+	(G, LIGt0, Instability) 0.5000 0.5000
+	(G, LIGt0, Neutral) 0.5000 0.5000
+	(G, LIGt0, Stability) 0.5000 0.5000
+	(G, N1GtLIGt_4, Instability) 0.5000 0.5000
+	(G, N1GtLIGt_4, Neutral) 0.5000 0.5000
+	(G, N1GtLIGt_4, Stability) 0.5000 0.5000
+	(G, N5GtLIGt_8, Instability) 0.5000 0.5000
+	(G, N5GtLIGt_8, Neutral) 0.5000 0.5000
+	(G, N5GtLIGt_8, Stability) 0.5000 0.5000
+	(G, LILt_8, Instability) 0.5000 0.5000
+	(G, LILt_8, Neutral) 0.5000 0.5000
+	(G, LILt_8, Stability) 0.5000 0.5000
+	(H, LIGt0, Instability) 0.5000 0.5000
+	(H, LIGt0, Neutral) 0.5000 0.5000
+	(H, LIGt0, Stability) 0.5000 0.5000
+	(H, N1GtLIGt_4, Instability) 0.5000 0.5000
+	(H, N1GtLIGt_4, Neutral) 0.5000 0.5000
+	(H, N1GtLIGt_4, Stability) 0.5000 0.5000
+	(H, N5GtLIGt_8, Instability) 0.5000 0.5000
+	(H, N5GtLIGt_8, Neutral) 0.5000 0.5000
+	(H, N5GtLIGt_8, Stability) 0.5000 0.5000
+	(H, LILt_8, Instability) 0.5000 0.5000
+	(H, LILt_8, Neutral) 0.5000 0.5000
+	(H, LILt_8, Stability) 0.5000 0.5000
+	(K, LIGt0, Instability) 0.5000 0.5000
+	(K, LIGt0, Neutral) 0.5000 0.5000
+	(K, LIGt0, Stability) 0.5000 0.5000
+	(K, N1GtLIGt_4, Instability) 0.5000 0.5000
+	(K, N1GtLIGt_4, Neutral) 0.5000 0.5000
+	(K, N1GtLIGt_4, Stability) 0.5000 0.5000
+	(K, N5GtLIGt_8, Instability) 0.5000 0.5000
+	(K, N5GtLIGt_8, Neutral) 0.5000 0.5000
+	(K, N5GtLIGt_8, Stability) 0.5000 0.5000
+	(K, LILt_8, Instability) 0.5000 0.5000
+	(K, LILt_8, Neutral) 0.5000 0.5000
+	(K, LILt_8, Stability) 0.5000 0.5000
+};
+
+probability ( InsSclInScen | AMInsWliScen, InsChange ) {
+	table 0.5000 0.5000 ;
+};
+
+probability ( ScenRel3_4 | Scenario ) {
+	(A) 0.5000 0.5000
+	(B) 0.5000 0.5000
+	(C) 0.5000 0.5000
+	(D) 0.5000 0.5000
+	(E) 0.5000 0.5000
+	(F) 0.5000 0.5000
+	(G) 0.5000 0.5000
+	(H) 0.5000 0.5000
+	(I) 0.5000 0.5000
+	(J) 0.5000 0.5000
+	(K) 0.5000 0.5000
+};
+
+probability ( LatestCIN ) {
+	table 0.5000 0.5000 ;
+};
+
+probability ( LLIW ) {
+	table 0.5000 0.5000 ;
+};
+
+probability ( CurPropConv | LatestCIN, LLIW ) {
+	(None, Unfavorable) 0.5000 0.5000
+	(None, Weak) 0.5000 0.5000
+	(None, Moderate) 0.5000 0.5000
+	(None, Strong) 0.5000 0.5000
+	(PartInhibit, Unfavorable) 0.5000 0.5000
+	(PartInhibit, Weak) 0.5000 0.5000
+	(PartInhibit, Moderate) 0.5000 0.5000
+	(PartInhibit, Strong) 0.5000 0.5000
+	(Stifling, Unfavorable) 0.5000 0.5000
+	(Stifling, Weak) 0.5000 0.5000
+	(Stifling, Moderate) 0.5000 0.5000
+	(Stifling, Strong) 0.5000 0.5000
+	(TotalInhibit, Unfavorable) 0.5000 0.5000
+	(TotalInhibit, Weak) 0.5000 0.5000
+	(TotalInhibit, Moderate) 0.5000 0.5000
+	(TotalInhibit, Strong) 0.5000 0.5000
+};
+
+probability ( ScnRelPlFcst | Scenario ) {
+	(A) 0.5000 0.5000
+	(B) 0.5000 0.5000
+	(C) 0.5000 0.5000
+	(D) 0.5000 0.5000
+	(E) 0.5000 0.5000
+	(F) 0.5000 0.5000
+	(G) 0.5000 0.5000
+	(H) 0.5000 0.5000
+	(I) 0.5000 0.5000
+	(J) 0.5000 0.5000
+	(K) 0.5000 0.5000
+};
+
+probability ( PlainsFcst | CurPropConv, InsSclInScen, CapInScen, ScnRelPlFcst ) {
+	table 0.5000 0.5000 ;
+};
+
+probability ( N34StarFcst | ScenRel3_4, PlainsFcst ) {
+	(ACEFK, XNIL) 0.5000 0.5000
+	(ACEFK, SIG) 0.5000 0.5000
+	(ACEFK, SVR) 0.5000 0.5000
+	(B, XNIL) 0.5000 0.5000
+	(B, SIG) 0.5000 0.5000
+	(B, SVR) 0.5000 0.5000
+	(D, XNIL) 0.5000 0.5000
+	(D, SIG) 0.5000 0.5000
+	(D, SVR) 0.5000 0.5000
+	(GJ, XNIL) 0.5000 0.5000
+	(GJ, SIG) 0.5000 0.5000
+	(GJ, SVR) 0.5000 0.5000
+	(HI, XNIL) 0.5000 0.5000
+	(HI, SIG) 0.5000 0.5000
+	(HI, SVR) 0.5000 0.5000
+};
+
+probability ( R5Fcst | MountainFcst, N34StarFcst ) {
+	(XNIL, XNIL) 0.5000 0.5000
+	(XNIL, SIG) 0.5000 0.5000
+	(XNIL, SVR) 0.5000 0.5000
+	(SIG, XNIL) 0.5000 0.5000
+	(SIG, SIG) 0.5000 0.5000
+	(SIG, SVR) 0.5000 0.5000
+	(SVR, XNIL) 0.5000 0.5000
+	(SVR, SIG) 0.5000 0.5000
+	(SVR, SVR) 0.5000 0.5000
+};
+
+probability ( Dewpoints | Scenario ) {
+	(A) 0.5000 0.5000
+	(B) 0.5000 0.5000
+	(C) 0.5000 0.5000
+	(D) 0.5000 0.5000
+	(E) 0.5000 0.5000
+	(F) 0.5000 0.5000
+	(G) 0.5000 0.5000
+	(H) 0.5000 0.5000
+	(I) 0.5000 0.5000
+	(J) 0.5000 0.5000
+	(K) 0.5000 0.5000
+};
+
+probability ( LowLLapse | Scenario ) {
+	(A) 0.5000 0.5000
+	(B) 0.5000 0.5000
+	(C) 0.5000 0.5000
+	(D) 0.5000 0.5000
+	(E) 0.5000 0.5000
+	(F) 0.5000 0.5000
+	(G) 0.5000 0.5000
+	(H) 0.5000 0.5000
+	(I) 0.5000 0.5000
+	(J) 0.5000 0.5000
+	(K) 0.5000 0.5000
+};
+
+probability ( MeanRH | Scenario ) {
+	(A) 0.5000 0.5000
+	(B) 0.5000 0.5000
+	(C) 0.5000 0.5000
+	(D) 0.5000 0.5000
+	(E) 0.5000 0.5000
+	(F) 0.5000 0.5000
+	(G) 0.5000 0.5000
+	(H) 0.5000 0.5000
+	(I) 0.5000 0.5000
+	(J) 0.5000 0.5000
+	(K) 0.5000 0.5000
+};
+
+probability ( MidLLapse | Scenario ) {
+	(A) 0.5000 0.5000
+	(B) 0.5000 0.5000
+	(C) 0.5000 0.5000
+	(D) 0.5000 0.5000
+	(E) 0.5000 0.5000
+	(F) 0.5000 0.5000
+	(G) 0.5000 0.5000
+	(H) 0.5000 0.5000
+	(I) 0.5000 0.5000
+	(J) 0.5000 0.5000
+	(K) 0.5000 0.5000
+};
+
+probability ( MvmtFeatures | Scenario ) {
+	(A) 0.5000 0.5000
+	(B) 0.5000 0.5000
+	(C) 0.5000 0.5000
+	(D) 0.5000 0.5000
+	(E) 0.5000 0.5000
+	(F) 0.5000 0.5000
+	(G) 0.5000 0.5000
+	(H) 0.5000 0.5000
+	(I) 0.5000 0.5000
+	(J) 0.5000 0.5000
+	(K) 0.5000 0.5000
+};
+
+probability ( RHRatio | Scenario ) {
+	(A) 0.5000 0.5000
+	(B) 0.5000 0.5000
+	(C) 0.5000 0.5000
+	(D) 0.5000 0.5000
+	(E) 0.5000 0.5000
+	(F) 0.5000 0.5000
+	(G) 0.5000 0.5000
+	(H) 0.5000 0.5000
+	(I) 0.5000 0.5000
+	(J) 0.5000 0.5000
+	(K) 0.5000 0.5000
+};
+
+probability ( SfcWndShfDis | Scenario ) {
+	(A) 0.5000 0.5000
+	(B) 0.5000 0.5000
+	(C) 0.5000 0.5000
+	(D) 0.5000 0.5000
+	(E) 0.5000 0.5000
+	(F) 0.5000 0.5000
+	(G) 0.5000 0.5000
+	(H) 0.5000 0.5000
+	(I) 0.5000 0.5000
+	(J) 0.5000 0.5000
+	(K) 0.5000 0.5000
+};
+
+probability ( SynForcng | Scenario ) {
+	(A) 0.5000 0.5000
+	(B) 0.5000 0.5000
+	(C) 0.5000 0.5000
+	(D) 0.5000 0.5000
+	(E) 0.5000 0.5000
+	(F) 0.5000 0.5000
+	(G) 0.5000 0.5000
+	(H) 0.5000 0.5000
+	(I) 0.5000 0.5000
+	(J) 0.5000 0.5000
+	(K) 0.5000 0.5000
+};
+
+probability ( TempDis | Scenario ) {
+	(A) 0.5000 0.5000
+	(B) 0.5000 0.5000
+	(C) 0.5000 0.5000
+	(D) 0.5000 0.5000
+	(E) 0.5000 0.5000
+	(F) 0.5000 0.5000
+	(G) 0.5000 0.5000
+	(H) 0.5000 0.5000
+	(I) 0.5000 0.5000
+	(J) 0.5000 0.5000
+	(K) 0.5000 0.5000
+};
+
+probability ( WindAloft | Scenario ) {
+	(A) 0.5000 0.5000
+	(B) 0.5000 0.5000
+	(C) 0.5000 0.5000
+	(D) 0.5000 0.5000
+	(E) 0.5000 0.5000
+	(F) 0.5000 0.5000
+	(G) 0.5000 0.5000
+	(H) 0.5000 0.5000
+	(I) 0.5000 0.5000
+	(J) 0.5000 0.5000
+	(K) 0.5000 0.5000
+};
+
+probability ( WindFieldMt | Scenario ) {
+	(A) 0.5000 0.5000
+	(B) 0.5000 0.5000
+	(C) 0.5000 0.5000
+	(D) 0.5000 0.5000
+	(E) 0.5000 0.5000
+	(F) 0.5000 0.5000
+	(G) 0.5000 0.5000
+	(H) 0.5000 0.5000
+	(I) 0.5000 0.5000
+	(J) 0.5000 0.5000
+	(K) 0.5000 0.5000
+};
+
+probability ( WindFieldPln | Scenario ) {
+	(A) 0.5000 0.5000
+	(B) 0.5000 0.5000
+	(C) 0.5000 0.5000
+	(D) 0.5000 0.5000
+	(E) 0.5000 0.5000
+	(F) 0.5000 0.5000
+	(G) 0.5000 0.5000
+	(H) 0.5000 0.5000
+	(I) 0.5000 0.5000
+	(J) 0.5000 0.5000
+	(K) 0.5000 0.5000
+};
+
